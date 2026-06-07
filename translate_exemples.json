@@ -1,0 +1,220 @@
+{
+  "translation_database": {
+    "darija": [
+      {
+        "id": 1,
+        "french": "Comment ça va ? Qu'est-ce que tu fais ?",
+        "classique": "Kif dayer? Chno katdir?",
+        "sms": "Labas? chno ktdir? 3la slamtk",
+        "context": "Salutations"
+      },
+      {
+        "id": 2,
+        "french": "Merci beaucoup pour ton aide, mon ami.",
+        "classique": "Chokran bzaf 3la lmo3awana dialk, a khoya.",
+        "sms": "Chti chokran bzf 3la l3win a khay",
+        "context": "Gratitude"
+      },
+      {
+        "id": 3,
+        "french": "Je t'attends au café. Tu arrives quand ?",
+        "classique": "Ana kantsnak f l9ahwa. Fo9ach ghadi tji?",
+        "sms": "Hani f l9hwa f9ach tji?",
+        "context": "Rendez-vous"
+      },
+      {
+        "id": 4,
+        "french": "Prends soin de toi, on se parle plus tard.",
+        "classique": "Thala f rasek, ghadin ntkalmo mn b3d.",
+        "sms": "Thla f rsk nhdro mn b3d",
+        "context": "Séparation"
+      },
+      {
+        "id": 5,
+        "french": "Où est-ce qu'on mange ce soir ?",
+        "classique": "Fin ghadin naklo had lila?",
+        "sms": "Fin ghanklo lyouma?",
+        "context": "Logistique"
+      },
+      {
+        "id": 6,
+        "french": "Ne t'inquiète pas, tout va bien se passer.",
+        "classique": "Matkhafch, kolchi ghadi ydoz mzyan.",
+        "sms": "Mtkhafch kolsi ghadoz mzn",
+        "context": "Rassurance"
+      },
+      {
+        "id": 7,
+        "french": "Il fait super chaud aujourd'hui !",
+        "classique": "Kayn lberd wla l9se7 bzaf lyouma (Sda3 dial l3afia).",
+        "sms": "Kayn l7al s7on bzf lyoum! 🥵",
+        "context": "Météo"
+      },
+      {
+        "id": 8,
+        "french": "Je suis fatigué, je vais dormir.",
+        "classique": "Ana 3iyan, ghadi nmchi n3as.",
+        "sms": "3iyan bzf ghan3s",
+        "context": "État physique"
+      },
+      {
+        "id": 9,
+        "french": "Tu peux m'envoyer l'adresse s'il te plaît ?",
+        "classique": "3afak, ymkn lik tsifet lia l'adresse?",
+        "sms": "Stp sifet lia l'adr",
+        "context": "Requête"
+      },
+      {
+        "id": 10,
+        "french": "C'est magnifique ! Félicitations !",
+        "classique": "Hadchi raye3 bzaf! Mabrouk 3lik!",
+        "sms": "Hadsi top! Mbrok! 🎉",
+        "context": "Célébration"
+      }
+    ],
+    "wolof": [
+      {
+        "id": 1,
+        "french": "Comment ça va ? Qu'est-ce que tu fais ?",
+        "classique": "Naka nga sant? Loouy liggéey?",
+        "sms": "Nanga def? loy liguéy?",
+        "context": "Salutations"
+      },
+      {
+        "id": 2,
+        "french": "Merci beaucoup pour ton aide, mon ami.",
+        "classique": "Jërëjëf lool ci ndimmil bi, sama xarit.",
+        "sms": "Jerejef ci ndimbeul bi samay ga",
+        "context": "Gratitude"
+      },
+      {
+        "id": 3,
+        "french": "Je t'attends au café. Tu arrives quand ?",
+        "classique": "Mangi lay xaar ci kafe bi. Kañ ngay yegg?",
+        "sms": "Mangi lay xar c café bi. kagn ngay eg?",
+        "context": "Rendez-vous"
+      },
+      {
+        "id": 4,
+        "french": "Prends soin de toi, on se parle plus tard.",
+        "classique": "Fàttali sa bopp, di nañu wax leneen jor.",
+        "sms": "Bul faté sa bop dinala wox tmt",
+        "context": "Séparation"
+      },
+      {
+        "id": 5,
+        "french": "Où est-ce qu'on mange ce soir ?",
+        "classique": "Fan lañuy jëndé reer bi tey?",
+        "sms": "Fan laniy réré tey?",
+        "context": "Logistique"
+      },
+      {
+        "id": 6,
+        "french": "Ne t'inquiète pas, tout va bien se passer.",
+        "classique": "Bul jaxaso, lépp di na baax.",
+        "sms": "Boul tite lep bakh",
+        "context": "Rassurance"
+      },
+      {
+        "id": 7,
+        "french": "Il fait super chaud aujourd'hui !",
+        "classique": "Tey dafa tàng lool fi.",
+        "sms": "Tey dafa tang lol mdr",
+        "context": "Météo"
+      },
+      {
+        "id": 8,
+        "french": "Je suis fatigué, je vais dormir.",
+        "classique": "Dama sonn lool, mangi jëm ci nelaw.",
+        "sms": "Dama sone mangi nely g",
+        "context": "État physique"
+      },
+      {
+        "id": 9,
+        "french": "Tu peux m'envoyer l'adresse s'il te plaît ?",
+        "classique": "Ndax nga mën ma jox sa ladres, laaj na la ko?",
+        "sms": "Mën nga ma envoiyé adr bi stp?",
+        "context": "Requête"
+      },
+      {
+        "id": 10,
+        "french": "C'est magnifique ! Félicitations !",
+        "classique": "Lii dafa rafet lool! Ndokkel sa bopp!",
+        "sms": "Li dafa rafet! Ndokkel! 👏",
+        "context": "Célébration"
+      }
+    ],
+    "tahitien": [
+      {
+        "id": 1,
+        "french": "Comment ça va ? Qu'est-ce que tu fais ?",
+        "classique": "E aha tō ‘oe huru? Te aha ra ‘oe?",
+        "sms": "E aha to oe huru? taha ra oe?",
+        "context": "Salutations"
+      },
+      {
+        "id": 2,
+        "french": "Merci beaucoup pour ton aide, mon ami.",
+        "classique": "Māuruuru roa nō tō ‘oe tauturu, tō’u hoa.",
+        "sms": "Mauruuru roa no to tauturu to'u hoa",
+        "context": "Gratitude"
+      },
+      {
+        "id": 3,
+        "french": "Je t'attends au café. Tu arrives quand ?",
+        "classique": "Te tīa’i nei au ia ‘oe i te fare tōfe. Āfea ‘oe e tae mai ai?",
+        "sms": "Tiai nei au ia oe i t fare tofe. Afea oe e tae mai?",
+        "context": "Rendez-vous"
+      },
+      {
+        "id": 4,
+        "french": "Prends soin de toi, on se parle plus tard.",
+        "classique": "A aupuru ia ‘oe, e paraparau tāua i muri iho.",
+        "sms": "Aupuru ia oe, e paraprau taua amuriho",
+        "context": "Séparation"
+      },
+      {
+        "id": 5,
+        "french": "Où est-ce qu'on mange ce soir ?",
+        "classique": "E tāmā tāua i hē i teie pō?",
+        "sms": "E tama taua i he i teie po?",
+        "context": "Logistique"
+      },
+      {
+        "id": 6,
+        "french": "Ne t'inquiète pas, tout va bien se passer.",
+        "classique": "‘Eiaha e rāre, e maita’i roa te mau mea ato’a.",
+        "sms": "Eiaha e rare, e maitai roa te mau mea ato'a",
+        "context": "Rassurance"
+      },
+      {
+        "id": 7,
+        "french": "Il fait super chaud aujourd'hui !",
+        "classique": "Mea tōfēfe roa te mahana i teie mahana!",
+        "sms": "Mea mahana roa te mahana teie mhn",
+        "context": "Météo"
+      },
+      {
+        "id": 8,
+        "french": "Je suis fatigué, je vais dormir.",
+        "classique": "Ua paruparu au, e haere au e ta’oto.",
+        "sms": "Ua paruparu au, haere au e taoto",
+        "context": "État physique"
+      },
+      {
+        "id": 9,
+        "french": "Tu peux m'envoyer l'adresse s'il te plaît ?",
+        "classique": "E nehenehe ānei ia ‘oe e hāpono mai i te vāhi noho, tēnā na?",
+        "sms": "Nehenehe anei ia oe e hapono mai i t vahi noho?",
+        "context": "Requête"
+      },
+      {
+        "id": 10,
+        "french": "C'est magnifique ! Félicitations !",
+        "classique": "Mea nehenehe roa teie! Te ‘oa’oa nei au nō ‘oe!",
+        "sms": "Mea nehenehe roa! Te oa'oa nei no oe! 🎉",
+        "context": "Célébration"
+      }
+    ]
+  }
+}
