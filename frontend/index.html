@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Linguao — Traducteur darija · wolof · tahitien</title>
+  <meta name="theme-color" content="#1c1a2e" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="app-header">
+      <h1>Linguao</h1>
+      <p class="subtitle">Traduction français → darija · wolof · tahitien</p>
+    </header>
+
+    <div class="controls">
+      <div class="lang-picker" id="lang-picker">
+        <button class="lang-pill" data-lang="darija">Darija</button>
+        <button class="lang-pill" data-lang="wolof">Wolof</button>
+        <button class="lang-pill" data-lang="tahitien">Tahitien</button>
+      </div>
+
+      <div class="register-toggle" id="register-toggle">
+        <button class="register-option active" data-register="classique">Classique</button>
+        <button class="register-option" data-register="sms">SMS</button>
+      </div>
+    </div>
+
+    <main class="chat" id="chat">
+      <div class="empty-state" id="empty-state">
+        Écris une phrase en français ci-dessous pour commencer.
+      </div>
+    </main>
+
+    <form class="composer" id="composer">
+      <textarea
+        id="input-text"
+        placeholder="Écris ta phrase en français..."
+        rows="1"
+        required
+      ></textarea>
+      <button type="submit" id="send-btn" aria-label="Traduire">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M4 12h16M14 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

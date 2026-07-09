@@ -1,0 +1,198 @@
+:root {
+  --bg: #14121f;
+  --bg-elevated: #1c1a2e;
+  --text: #f2f0f7;
+  --text-dim: #a6a1bd;
+  --border: #302c47;
+
+  --darija: #d97b52;
+  --wolof: #5b6ee1;
+  --tahitien: #3ab8b0;
+
+  --accent: var(--darija);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.app {
+  max-width: 640px;
+  margin: 0 auto;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  padding: env(safe-area-inset-top) 1rem env(safe-area-inset-bottom);
+}
+
+.app-header {
+  padding: 1.25rem 0 0.5rem;
+  text-align: center;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  letter-spacing: 0.02em;
+}
+
+.subtitle {
+  margin: 0.25rem 0 0;
+  color: var(--text-dim);
+  font-size: 0.85rem;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 0;
+  flex-wrap: wrap;
+}
+
+.lang-picker,
+.register-toggle {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.lang-pill,
+.register-option {
+  border: 1px solid var(--border);
+  background: var(--bg-elevated);
+  color: var(--text-dim);
+  border-radius: 999px;
+  padding: 0.4rem 0.85rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.lang-pill[data-lang="darija"].active { background: var(--darija); color: #fff; border-color: var(--darija); }
+.lang-pill[data-lang="wolof"].active { background: var(--wolof); color: #fff; border-color: var(--wolof); }
+.lang-pill[data-lang="tahitien"].active { background: var(--tahitien); color: #fff; border-color: var(--tahitien); }
+
+.register-option.active {
+  background: var(--text);
+  color: var(--bg);
+  border-color: var(--text);
+}
+
+.chat {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 0.5rem 0 1rem;
+}
+
+.empty-state {
+  margin: auto;
+  text-align: center;
+  color: var(--text-dim);
+  font-size: 0.9rem;
+  padding: 2rem;
+}
+
+.bubble {
+  max-width: 80%;
+  padding: 0.65rem 0.9rem;
+  border-radius: 1.1rem;
+  line-height: 1.4;
+  font-size: 0.95rem;
+  word-wrap: break-word;
+}
+
+.bubble.source {
+  align-self: flex-end;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-bottom-right-radius: 0.3rem;
+}
+
+.bubble.result {
+  align-self: flex-start;
+  color: #fff;
+  border-bottom-left-radius: 0.3rem;
+}
+
+.bubble.result.darija { background: var(--darija); }
+.bubble.result.wolof { background: var(--wolof); }
+.bubble.result.tahitien { background: var(--tahitien); }
+
+.bubble.result.pending {
+  opacity: 0.6;
+  font-style: italic;
+}
+
+.bubble.result.error {
+  background: #7a2f2f;
+}
+
+.composer {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.75rem 0 1rem;
+  border-top: 1px solid var(--border);
+}
+
+.composer textarea {
+  flex: 1;
+  resize: none;
+  max-height: 6rem;
+  padding: 0.65rem 0.9rem;
+  border-radius: 1.2rem;
+  border: 1px solid var(--border);
+  background: var(--bg-elevated);
+  color: var(--text);
+  font-size: 0.95rem;
+  font-family: inherit;
+}
+
+.composer textarea:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+
+.composer button {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: none;
+  background: var(--accent);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.composer button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .bubble {
+    animation: rise 0.2s ease;
+  }
+}
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}

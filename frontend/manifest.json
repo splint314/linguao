@@ -1,0 +1,10 @@
+{
+  "name": "Linguao",
+  "short_name": "Linguao",
+  "description": "Traducteur français vers darija, wolof et tahitien",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#14121f",
+  "theme_color": "#1c1a2e",
+  "icons": []
+}
