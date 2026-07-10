@@ -70,6 +70,111 @@
         "classique": "Hadchi raye3 bzaf! Mabrouk 3lik!",
         "sms": "Hadsi top! Mbrok! 🎉",
         "context": "Célébration"
+      },
+      {
+        "id": 11,
+        "french": "Combien ça coûte ce tee-shirt ?",
+        "classique": "Bcha7al hada tee-shirt, 3afak?",
+        "sms": "Bch7al hadchi stp?",
+        "context": "Achats"
+      },
+      {
+        "id": 12,
+        "french": "J'ai mal à la tête depuis ce matin.",
+        "classique": "3andi lwja3 dyal ras mnin sba7.",
+        "sms": "3ndi wja3 f ras mn sba7",
+        "context": "Santé"
+      },
+      {
+        "id": 13,
+        "french": "Appelle une ambulance, s'il te plaît, c'est urgent !",
+        "classique": "3ayet l'ambulance 3afak, mesta3jla!",
+        "sms": "3yt l'ambulance daba, mesta3jla!",
+        "context": "Urgence"
+      },
+      {
+        "id": 14,
+        "french": "Ma sœur vient nous rendre visite demain.",
+        "classique": "Khti ghadya tji tzurna ghdda.",
+        "sms": "Khti ghatji ghdda",
+        "context": "Famille"
+      },
+      {
+        "id": 15,
+        "french": "Tu veux venir dîner chez moi samedi ?",
+        "classique": "Bghiti tji takol 3ndi nhar sebt?",
+        "sms": "Bghiti tji 3ndi sbt?",
+        "context": "Invitation"
+      },
+      {
+        "id": 16,
+        "french": "Je suis désolé, j'ai oublié notre rendez-vous.",
+        "classique": "Sme7 lia, nsit rendez-vous dyalna.",
+        "sms": "Sm7 lia nsit rdv",
+        "context": "Excuses"
+      },
+      {
+        "id": 17,
+        "french": "Tu as l'air en pleine forme aujourd'hui !",
+        "classique": "Bayn 3lik mzyan bzaf lyoum!",
+        "sms": "Bayn 3lik top lyoum!",
+        "context": "Compliment"
+      },
+      {
+        "id": 18,
+        "french": "Je suis vraiment content de te revoir.",
+        "classique": "Ana fer7an bzaf b choftek.",
+        "sms": "Fr7an bzf n chftk",
+        "context": "Sentiments"
+      },
+      {
+        "id": 19,
+        "french": "Ce plat est délicieux, qui l'a préparé ?",
+        "classique": "Had lma3kola bnina bzaf, chkun dayrha?",
+        "sms": "Hadchi bnin bzf chkon dayrha?",
+        "context": "Nourriture"
+      },
+      {
+        "id": 20,
+        "french": "Je te rappelle dans cinq minutes.",
+        "classique": "Ghadi n3awd n3ayet lik mn b3d khms d9ay9.",
+        "sms": "Ghan3awd n3yt lik mn b3d 5mn",
+        "context": "Téléphone"
+      },
+      {
+        "id": 21,
+        "french": "Je n'ai pas assez d'argent sur moi.",
+        "classique": "Ma 3ndich flouss bezaf m3aya daba.",
+        "sms": "Mandich flouss bzf 3ndi",
+        "context": "Argent"
+      },
+      {
+        "id": 22,
+        "french": "Je dois finir ce rapport avant vendredi.",
+        "classique": "Khassni nkml had rapport 9bl lgom3a.",
+        "sms": "Khsni nsalk rapport 9bl jm3a",
+        "context": "Travail"
+      },
+      {
+        "id": 23,
+        "french": "Mon téléphone n'a plus de batterie.",
+        "classique": "Portable dyali salat lo l batteria.",
+        "sms": "Portabli mat lo batri",
+        "context": "Technologie"
+      },
+      {
+        "id": 24,
+        "french": "Ça fait longtemps qu'on ne s'est pas vus !",
+        "classique": "Hadi mudda tawila ou ma tchoufnach!",
+        "sms": "Mn zman ma tchawfna!",
+        "context": "Retrouvailles"
+      },
+      {
+        "id": 25,
+        "french": "Bonne chance pour ton nouveau travail !",
+        "classique": "Bonne chance f khadmtk jdida!",
+        "sms": "Bnn chance f khdmtk jdida! 🍀",
+        "context": "Encouragement"
       }
     ],
     "wolof": [
@@ -142,6 +247,111 @@
         "classique": "Lii dafa rafet lool! Ndokkel sa bopp!",
         "sms": "Li dafa rafet! Ndokkel! 👏",
         "context": "Célébration"
+      },
+      {
+        "id": 11,
+        "french": "Combien ça coûte ce tee-shirt ?",
+        "classique": "Ñaata la tee-shirt bi jar?",
+        "sms": "Gnata la tishirt bi war?",
+        "context": "Achats"
+      },
+      {
+        "id": 12,
+        "french": "J'ai mal à la tête depuis ce matin.",
+        "classique": "Dama metti bopp li dale ci suba si.",
+        "sms": "Dama meti bop dal ci suba",
+        "context": "Santé"
+      },
+      {
+        "id": 13,
+        "french": "Appelle une ambulance, s'il te plaît, c'est urgent !",
+        "classique": "Woo ambulance bi, su la neexee, dafa gaaw!",
+        "sms": "Wo ambulans stp gaw na!",
+        "context": "Urgence"
+      },
+      {
+        "id": 14,
+        "french": "Ma sœur vient nous rendre visite demain.",
+        "classique": "Sama rakk jigéen dafay ñëw ci suba di nu seetsi.",
+        "sms": "Sama rak dinga new suba seetsi",
+        "context": "Famille"
+      },
+      {
+        "id": 15,
+        "french": "Tu veux venir dîner chez moi samedi ?",
+        "classique": "Ndax dangay bëgg ñëw reer ci sama kër gaawu bi?",
+        "sms": "Dinga new lek sama ker gawu bi?",
+        "context": "Invitation"
+      },
+      {
+        "id": 16,
+        "french": "Je suis désolé, j'ai oublié notre rendez-vous.",
+        "classique": "Baal ma, fàtte naa rendez-vous bi.",
+        "sms": "Bal ma fate rdv bi",
+        "context": "Excuses"
+      },
+      {
+        "id": 17,
+        "french": "Tu as l'air en pleine forme aujourd'hui !",
+        "classique": "Dangay melni yaatu lool tey!",
+        "sms": "Dang mel yat lol tey!",
+        "context": "Compliment"
+      },
+      {
+        "id": 18,
+        "french": "Je suis vraiment content de te revoir.",
+        "classique": "Dama bëgg lool gis la ci kaw.",
+        "sms": "Dama bg lol gis la",
+        "context": "Sentiments"
+      },
+      {
+        "id": 19,
+        "french": "Ce plat est délicieux, qui l'a préparé ?",
+        "classique": "Reer bi neex na lool, kan moo ko defar?",
+        "sms": "Rer bi nex lol kan defar ko?",
+        "context": "Nourriture"
+      },
+      {
+        "id": 20,
+        "french": "Je te rappelle dans cinq minutes.",
+        "classique": "Dinaa la wooyaat ci diirub juróom simili.",
+        "sms": "Din la woyat ci 5mn",
+        "context": "Téléphone"
+      },
+      {
+        "id": 21,
+        "french": "Je n'ai pas assez d'argent sur moi.",
+        "classique": "Amul ma xaalis bu doy ci man.",
+        "sms": "Amuma xalis bu doy",
+        "context": "Argent"
+      },
+      {
+        "id": 22,
+        "french": "Je dois finir ce rapport avant vendredi.",
+        "classique": "Fàww ma paré rapport bi lu ëpp ci àjjuma.",
+        "sms": "Faw ma pare rapport bi ajjuma",
+        "context": "Travail"
+      },
+      {
+        "id": 23,
+        "french": "Mon téléphone n'a plus de batterie.",
+        "classique": "Sama telefon dafa mës batiri.",
+        "sms": "Sama tel dafa mes batri",
+        "context": "Technologie"
+      },
+      {
+        "id": 24,
+        "french": "Ça fait longtemps qu'on ne s'est pas vus !",
+        "classique": "Yàgg na lu nu waxul ci kaw!",
+        "sms": "Yag na lu nu wax ul!",
+        "context": "Retrouvailles"
+      },
+      {
+        "id": 25,
+        "french": "Bonne chance pour ton nouveau travail !",
+        "classique": "Yal na yalla wommat liggéey bu bees bi!",
+        "sms": "Bon chance ci ligey bu bes bi! 🍀",
+        "context": "Encouragement"
       }
     ],
     "tahitien": [
@@ -214,6 +424,111 @@
         "classique": "Mea nehenehe roa teie! Te ‘oa’oa nei au nō ‘oe!",
         "sms": "Mea nehenehe roa! Te oa'oa nei no oe! 🎉",
         "context": "Célébration"
+      },
+      {
+        "id": 11,
+        "french": "Combien ça coûte ce tee-shirt ?",
+        "classique": "E hia moni teie tee-shirt?",
+        "sms": "E hia moni teie tishirt?",
+        "context": "Achats"
+      },
+      {
+        "id": 12,
+        "french": "J'ai mal à la tête depuis ce matin.",
+        "classique": "Mea mauiui tō’u upo’o mai teie poipoi mai.",
+        "sms": "Mauiui to'u upoo mai teie poipoi",
+        "context": "Santé"
+      },
+      {
+        "id": 13,
+        "french": "Appelle une ambulance, s'il te plaît, c'est urgent !",
+        "classique": "A pi’i i te fare ma’i, e mea pē’ape’a rahi!",
+        "sms": "Pii i te farema'i, pea pea rahi!",
+        "context": "Urgence"
+      },
+      {
+        "id": 14,
+        "french": "Ma sœur vient nous rendre visite demain.",
+        "classique": "E haere mai tō’u tuahine i te ā’apo’ipo’i nei e farerei ia mātou.",
+        "sms": "Tuahine e haere mai apopo farerei",
+        "context": "Famille"
+      },
+      {
+        "id": 15,
+        "french": "Tu veux venir dîner chez moi samedi ?",
+        "classique": "E hinaaro anei ‘oe e haere mai tāmā’a i tō’u fare i te mahana maa?",
+        "sms": "Hinaro oe haere tama'a to'u fare mahana ma?",
+        "context": "Invitation"
+      },
+      {
+        "id": 16,
+        "french": "Je suis désolé, j'ai oublié notre rendez-vous.",
+        "classique": "E ta’u hara, ua moe’ā ia’u tā tāua fā’ito’oraa.",
+        "sms": "Ta'u hara moea to'u tatou faitooraa",
+        "context": "Excuses"
+      },
+      {
+        "id": 17,
+        "french": "Tu as l'air en pleine forme aujourd'hui !",
+        "classique": "Mea nehenehe roa ‘oe i teie mahana!",
+        "sms": "Mea nehenehe roa oe teie mahana!",
+        "context": "Compliment"
+      },
+      {
+        "id": 18,
+        "french": "Je suis vraiment content de te revoir.",
+        "classique": "Mea ‘oa’oa roa au i te ite fa’ahou ia ‘oe.",
+        "sms": "Oaoa roa au ite fa'ahou ia oe",
+        "context": "Sentiments"
+      },
+      {
+        "id": 19,
+        "french": "Ce plat est délicieux, qui l'a préparé ?",
+        "classique": "Mea monamona roa teie ma’a, na vai i fa’anaho?",
+        "sms": "Mea monamona teie maa navai faanaho?",
+        "context": "Nourriture"
+      },
+      {
+        "id": 20,
+        "french": "Je te rappelle dans cinq minutes.",
+        "classique": "E niuniu fa’ahou au ia ‘oe i roto e pae mine.",
+        "sms": "Niuniu fa'ahou i roto e pae mine",
+        "context": "Téléphone"
+      },
+      {
+        "id": 21,
+        "french": "Je n'ai pas assez d'argent sur moi.",
+        "classique": "‘Aita ta’u moni e ti’a i teie nei.",
+        "sms": "Aita ta'u moni e tia",
+        "context": "Argent"
+      },
+      {
+        "id": 22,
+        "french": "Je dois finir ce rapport avant vendredi.",
+        "classique": "E ti’a ia’u ia oti teie parau ohipa hou te mahana pae.",
+        "sms": "Tia ia'u oti parau ohipa hou mahana pae",
+        "context": "Travail"
+      },
+      {
+        "id": 23,
+        "french": "Mon téléphone n'a plus de batterie.",
+        "classique": "‘Aita e uira toe i tā’u niuniu.",
+        "sms": "Aita e uira toe i ta'u niuniu",
+        "context": "Technologie"
+      },
+      {
+        "id": 24,
+        "french": "Ça fait longtemps qu'on ne s'est pas vus !",
+        "classique": "Roa te tau mai te farereiraa hopea!",
+        "sms": "Roa te tau mai farerei hopea!",
+        "context": "Retrouvailles"
+      },
+      {
+        "id": 25,
+        "french": "Bonne chance pour ton nouveau travail !",
+        "classique": "Ia manuia i tā ‘oe ohipa ‘āpī!",
+        "sms": "Ia manuia ohipa api!",
+        "context": "Encouragement"
       }
     ]
   }
