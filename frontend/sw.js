@@ -1,5 +1,13 @@
-const CACHE_NAME = "linguao-v1";
-const ASSETS = ["index.html", "style.css", "script.js", "manifest.json"];
+const CACHE_NAME = "linguao-v3";
+const ASSETS = [
+  "index.html",
+  "style.css",
+  "script.js",
+  "manifest.json",
+  "icons/icon-192.png",
+  "icons/icon-512.png",
+  "icons/apple-touch-icon.png",
+];
 
 self.addEventListener("install", (event) => {
   event.waitUntil(
