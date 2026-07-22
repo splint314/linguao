@@ -1,6 +1,16 @@
-const API_URL = "http://localhost:5000";
+const API_URL = window.location.port === "8000" ? "http://localhost:5000" : "";
 
-const appHeader = document.getElementById("app-header");
+// Nettoyage : une version précédente enregistrait un Service Worker.
+// On le désinscrit pour éviter qu'il ne serve du contenu périmé en cache.
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.getRegistrations().then((regs) => {
+    regs.forEach((reg) => reg.unregister());
+  });
+  if (window.caches) {
+    caches.keys().then((keys) => keys.forEach((k) => caches.delete(k)));
+  }
+}
+
 const chat = document.getElementById("chat");
 const emptyState = document.getElementById("empty-state");
 const composer = document.getElementById("composer");
@@ -9,55 +19,8 @@ const sendBtn = document.getElementById("send-btn");
 const langPicker = document.getElementById("lang-picker");
 const registerToggle = document.getElementById("register-toggle");
 
-function haptic(ms = 8) {
-  navigator.vibrate?.(ms);
-}
-
-function spawnRipple(el, x, y) {
-  const rect = el.getBoundingClientRect();
-  const size = Math.max(rect.width, rect.height) * 1.4;
-  const ripple = document.createElement("span");
-  ripple.className = "ripple";
-  ripple.style.width = ripple.style.height = `${size}px`;
-  ripple.style.left = `${x - rect.left - size / 2}px`;
-  ripple.style.top = `${y - rect.top - size / 2}px`;
-  el.appendChild(ripple);
-  ripple.addEventListener("animationend", () => ripple.remove());
-}
-
-function bindRipple(container, selector) {
-  container.addEventListener("pointerdown", (e) => {
-    const target = e.target.closest(selector);
-    if (!target) return;
-    spawnRipple(target, e.clientX, e.clientY);
-  });
-}
-
-bindRipple(langPicker, ".lang-pill");
-bindRipple(registerToggle, ".register-option");
-bindRipple(composer, "#send-btn");
-
-chat.addEventListener("scroll", () => {
-  appHeader.classList.toggle("scrolled", chat.scrollTop > 8);
-});
-
 let currentLang = "darija";
 let currentRegister = "classique";
-
-const ACCENTS = {
-  darija: ["--darija", "--darija-2"],
-  wolof: ["--wolof", "--wolof-2"],
-  tahitien: ["--tahitien", "--tahitien-2"],
-};
-
-function applyAccent(lang) {
-  const root = document.documentElement;
-  const [accent, accent2] = ACCENTS[lang];
-  root.style.setProperty("--accent", `var(${accent})`);
-  root.style.setProperty("--accent-2", `var(${accent2})`);
-}
-
-applyAccent(currentLang);
 
 langPicker.addEventListener("click", (e) => {
   const btn = e.target.closest(".lang-pill");
@@ -65,8 +28,6 @@ langPicker.addEventListener("click", (e) => {
   langPicker.querySelectorAll(".lang-pill").forEach((b) => b.classList.remove("active"));
   btn.classList.add("active");
   currentLang = btn.dataset.lang;
-  applyAccent(currentLang);
-  haptic();
 });
 
 registerToggle.addEventListener("click", (e) => {
@@ -75,7 +36,6 @@ registerToggle.addEventListener("click", (e) => {
   registerToggle.querySelectorAll(".register-option").forEach((b) => b.classList.remove("active"));
   btn.classList.add("active");
   currentRegister = btn.dataset.register;
-  haptic();
 });
 
 input.addEventListener("input", () => {
@@ -83,8 +43,15 @@ input.addEventListener("input", () => {
   input.style.height = Math.min(input.scrollHeight, 96) + "px";
 });
 
+input.addEventListener("keydown", (e) => {
+  if (e.key === "Enter" && !e.shiftKey) {
+    e.preventDefault();
+    composer.requestSubmit();
+  }
+});
+
 function addBubble(text, className) {
-  emptyState.remove?.();
+  if (emptyState.parentNode) emptyState.remove();
   const el = document.createElement("div");
   el.className = `bubble ${className}`;
   el.textContent = text;
@@ -93,21 +60,46 @@ function addBubble(text, className) {
   return el;
 }
 
-function typeReveal(el, text) {
-  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  if (prefersReducedMotion) {
-    el.textContent = text;
-    return;
+const POLL_TIMEOUT_MS = 3 * 60 * 1000;
+
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+// Intervalle de polling croissant (avec un peu d'aléatoire) : moins de
+// requêtes au total, et un profil moins "robotique" qui évite de déclencher
+// la protection anti-bot de Cloudflare (429) sur les requêtes répétées.
+function nextPollDelay(elapsedMs) {
+  let base = 4000;
+  if (elapsedMs > 90000) base = 8000;
+  else if (elapsedMs > 30000) base = 6000;
+  return base + Math.floor(Math.random() * 800);
+}
+
+async function pollJob(jobId, onTick) {
+  const start = Date.now();
+  const deadline = start + POLL_TIMEOUT_MS;
+  let consecutiveFailures = 0;
+  while (Date.now() < deadline) {
+    await sleep(nextPollDelay(Date.now() - start));
+    onTick(Math.round((Date.now() - start) / 1000));
+    try {
+      const res = await fetch(`${API_URL}/translate/${jobId}`);
+      if (!res.ok) throw new Error("job introuvable");
+      const job = await res.json();
+      consecutiveFailures = 0;
+      if (job.status === "done") return job.translation;
+      if (job.status === "error") throw new Error(job.error || "Erreur de traduction.");
+    } catch (err) {
+      // On tolère plusieurs ratés ponctuels (429 anti-bot Cloudflare, réseau...)
+      // avant d'abandonner, avec une pause plus longue pour laisser retomber
+      // une éventuelle limitation de débit, plutôt que d'insister aussitôt.
+      consecutiveFailures += 1;
+      if (consecutiveFailures >= 8) throw err;
+      await sleep(5000);
+    }
   }
-  el.textContent = "";
-  let i = 0;
-  const step = () => {
-    el.textContent += text[i];
-    i += 1;
-    chat.scrollTop = chat.scrollHeight;
-    if (i < text.length) requestAnimationFrame(() => setTimeout(step, 12));
-  };
-  step();
+  throw new Error("La traduction prend trop de temps, réessaie plus tard.");
 }
 
 composer.addEventListener("submit", async (e) => {
@@ -119,9 +111,8 @@ composer.addEventListener("submit", async (e) => {
   input.value = "";
   input.style.height = "auto";
   sendBtn.disabled = true;
-  haptic(12);
 
-  const pending = addBubble("...", `result pending ${currentLang}`);
+  const pending = addBubble("Traduction en cours…", `result pending ${currentLang}`);
 
   try {
     const res = await fetch(`${API_URL}/translate`, {
@@ -131,25 +122,24 @@ composer.addEventListener("submit", async (e) => {
     });
     const data = await res.json();
 
-    pending.classList.remove("pending");
     if (!res.ok) {
+      pending.classList.remove("pending");
       pending.classList.add("error");
       pending.textContent = data.error || "Erreur de traduction.";
-    } else {
-      typeReveal(pending, data.translation);
+      return;
     }
+
+    const translation = await pollJob(data.job_id, (secs) => {
+      pending.textContent = `Traduction en cours… (${secs}s)`;
+    });
+    pending.classList.remove("pending");
+    pending.textContent = translation;
   } catch (err) {
     pending.classList.remove("pending");
     pending.classList.add("error");
-    pending.textContent = "Impossible de joindre le serveur. Le backend est-il lancé ?";
+    pending.textContent = err.message || "Impossible de joindre le serveur. Le backend est-il lancé ?";
   } finally {
     sendBtn.disabled = false;
     input.focus();
   }
 });
-
-if ("serviceWorker" in navigator) {
-  window.addEventListener("load", () => {
-    navigator.serviceWorker.register("sw.js").catch(() => {});
-  });
-}

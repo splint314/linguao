@@ -20,7 +20,7 @@ def load_database():
         return json.load(f)["translation_database"]
 
 
-def get_examples(language, register, max_examples=5):
+def get_examples(language, register, max_examples=2):
     database = load_database()
     entries = database.get(language, [])
     sample = random.sample(entries, min(max_examples, len(entries)))
@@ -55,7 +55,7 @@ def translate(text, language, register="classique"):
     response = requests.post(
         OLLAMA_URL,
         json={"model": MODEL_NAME, "prompt": prompt, "stream": False},
-        timeout=60,
+        timeout=280,
     )
     response.raise_for_status()
     return response.json()["response"].strip()

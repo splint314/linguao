@@ -14,9 +14,7 @@ linguao/
 └── frontend/
     ├── index.html
     ├── style.css
-    ├── script.js
-    ├── manifest.json          # PWA installable
-    └── sw.js
+    └── script.js
 ```
 
 ## Prérequis
@@ -72,8 +70,6 @@ python3 -m http.server 8000
 
 Ouvre ensuite **http://localhost:8000** dans le navigateur.
 
-Sur mobile, ouvre cette même URL puis "Ajouter à l'écran d'accueil" pour installer l'app (PWA).
-
 ### Vérifier que ça tourne
 
 ```bash
@@ -96,7 +92,9 @@ puis change `MODEL_NAME = "qwen2.5:1.5b"` dans `backend/translator.py`.
 
 ## Comment ça marche
 
-Pour chaque traduction, le backend pioche quelques exemples pertinents dans `translate_exemples.json` pour la langue et le registre (classique/SMS) demandés, construit un prompt few-shot, et l'envoie à Ollama via son API locale (`http://localhost:11434/api/generate`).
+Pour chaque traduction, le backend pioche 2 exemples pertinents dans `translate_exemples.json` pour la langue et le registre (classique/SMS) demandés, construit un prompt few-shot court, et l'envoie à Ollama via son API locale (`http://localhost:11434/api/generate`).
+
+La requête `/translate` démarre la traduction en tâche de fond et répond immédiatement avec un `job_id` ; le frontend interroge ensuite `/translate/<job_id>` toutes les 1,5s jusqu'à obtenir le résultat. Ce fonctionnement asynchrone évite qu'un proxy (Cloudflare, etc.) ne coupe la connexion si le modèle met du temps à répondre.
 
 ## À propos des traductions
 
