@@ -175,6 +175,146 @@
         "classique": "Bonne chance f khadmtk jdida!",
         "sms": "Bnn chance f khdmtk jdida! 🍀",
         "context": "Encouragement"
+      },
+      {
+        "id": 26,
+        "french": "Où se trouve la gare, s'il te plaît ?",
+        "classique": "Fin kayna lagar, 3afak?",
+        "sms": "Fin l gar stp?",
+        "context": "Direction"
+      },
+      {
+        "id": 27,
+        "french": "J'ai un examen important demain.",
+        "classique": "3andi lexamen muhim ghda.",
+        "sms": "3ndi exam muhim ghda",
+        "context": "École"
+      },
+      {
+        "id": 28,
+        "french": "On joue au foot ce week-end ?",
+        "classique": "Ghadin nl3bo lkora had lweekend?",
+        "sms": "Ghanl3bo kora had west?",
+        "context": "Sport"
+      },
+      {
+        "id": 29,
+        "french": "Joyeux anniversaire ! Que tous tes vœux se réalisent.",
+        "classique": "Mabrouk 3id miladek! Allah ytak li bghiti.",
+        "sms": "Mbrok 3id miladk! 🎂",
+        "context": "Anniversaire"
+      },
+      {
+        "id": 30,
+        "french": "Je t'aime plus que tout.",
+        "classique": "Kanbghik ktar mn kolchi.",
+        "sms": "Knbghik ktr mn kolchi ❤️",
+        "context": "Amour"
+      },
+      {
+        "id": 31,
+        "french": "Toutes mes condoléances pour ta perte.",
+        "classique": "Ta3ziyati lik f had lmusiba.",
+        "sms": "Ta3ziyati lik 🙏",
+        "context": "Condoléances"
+      },
+      {
+        "id": 32,
+        "french": "Bon voyage, prends soin de toi.",
+        "classique": "Tri9 salama, thala f rasek.",
+        "sms": "Tri9 slama",
+        "context": "Voyage"
+      },
+      {
+        "id": 33,
+        "french": "Ma commande n'est toujours pas arrivée.",
+        "classique": "Talabi mazal ma wselch.",
+        "sms": "Talabi mazal mjch",
+        "context": "Shopping en ligne"
+      },
+      {
+        "id": 34,
+        "french": "J'ai rendez-vous chez le médecin demain.",
+        "classique": "3andi rendez-vous 3nd tbib ghda.",
+        "sms": "3ndi rdv tbib ghda",
+        "context": "Rendez-vous médical"
+      },
+      {
+        "id": 35,
+        "french": "Tu m'énerves vraiment là.",
+        "classique": "Kat3sbni bzaf daba.",
+        "sms": "Ktsbni bzf daba 😤",
+        "context": "Colère"
+      },
+      {
+        "id": 36,
+        "french": "C'est incroyable, je n'y crois pas !",
+        "classique": "Hadchi ma ykadabch, ma kanamnch!",
+        "sms": "Hadchi khyali! 😱",
+        "context": "Surprise"
+      },
+      {
+        "id": 37,
+        "french": "Es-tu sûr de ce que tu dis ?",
+        "classique": "Wach mota2akd mn li katgol?",
+        "sms": "Mta2kd mn li tgol?",
+        "context": "Question"
+      },
+      {
+        "id": 38,
+        "french": "Quelle heure est-il maintenant ?",
+        "classique": "Chhal f sa3a daba?",
+        "sms": "Chhal sa3a daba?",
+        "context": "Heure"
+      },
+      {
+        "id": 39,
+        "french": "Je suis à la maison, tu peux venir.",
+        "classique": "Ana f dar, ymkn lik tji.",
+        "sms": "Ana f dar tji",
+        "context": "Maison"
+      },
+      {
+        "id": 40,
+        "french": "J'ai adopté un chat la semaine dernière.",
+        "classique": "Chrit chi qett lousbou3 lfat.",
+        "sms": "Jbt qett lousbou3 lfat 🐱",
+        "context": "Animaux"
+      },
+      {
+        "id": 41,
+        "french": "J'adore vraiment cette chanson.",
+        "classique": "Kanbghi bzaf had l'ghnya.",
+        "sms": "Knbghi had lghnya bzf 🎵",
+        "context": "Musique"
+      },
+      {
+        "id": 42,
+        "french": "Bonne nuit, fais de beaux rêves.",
+        "classique": "Tsba7 3la khir, a7lam sa3ida.",
+        "sms": "Tsb7 3la khir 🌙",
+        "context": "Bonne nuit"
+      },
+      {
+        "id": 43,
+        "french": "Tu devrais te reposer un peu.",
+        "classique": "Khassek tertah chwiya.",
+        "sms": "Khsk trtah chwya",
+        "context": "Conseil"
+      },
+      {
+        "id": 44,
+        "french": "Ce n'est pas normal, il faut se plaindre.",
+        "classique": "Hadchi machi 3adi, khass nchtakiw.",
+        "sms": "Hadchi mchi 3adi",
+        "context": "Réclamation"
+      },
+      {
+        "id": 45,
+        "french": "Bienvenue chez nous, sens-toi à l'aise.",
+        "classique": "Marhba bik 3ndna, kon f rahtek.",
+        "sms": "Mrhba bik 3ndna 🏡",
+        "context": "Bienvenue"
       }
     ],
     "wolof": [
@@ -352,6 +492,146 @@
         "classique": "Yal na yalla wommat liggéey bu bees bi!",
         "sms": "Bon chance ci ligey bu bes bi! 🍀",
         "context": "Encouragement"
+      },
+      {
+        "id": 26,
+        "french": "Où se trouve la gare, s'il te plaît ?",
+        "classique": "Fan mooy gare bi, su la neexee?",
+        "sms": "Fan gare bi stp?",
+        "context": "Direction"
+      },
+      {
+        "id": 27,
+        "french": "J'ai un examen important demain.",
+        "classique": "Am naa examen bu am solo suba.",
+        "sms": "Am nam exam bu am solo suba",
+        "context": "École"
+      },
+      {
+        "id": 28,
+        "french": "On joue au foot ce week-end ?",
+        "classique": "Ndax dinanu fecc ci ndank week-end bi?",
+        "sms": "Nu fecc week-end bi?",
+        "context": "Sport"
+      },
+      {
+        "id": 29,
+        "french": "Joyeux anniversaire ! Que tous tes vœux se réalisent.",
+        "classique": "Anniversaire bu bees! Na yalla nangu say bëgg-bëgg.",
+        "sms": "Anniv bu bes! 🎂",
+        "context": "Anniversaire"
+      },
+      {
+        "id": 30,
+        "french": "Je t'aime plus que tout.",
+        "classique": "Dama la bëgg lu ëpp lépp.",
+        "sms": "Bgg la lu epp lep ❤️",
+        "context": "Amour"
+      },
+      {
+        "id": 31,
+        "french": "Toutes mes condoléances pour ta perte.",
+        "classique": "Yalla na leen dimbali ci jaay-jaayanteb.",
+        "sms": "Nawlène 🙏",
+        "context": "Condoléances"
+      },
+      {
+        "id": 32,
+        "french": "Bon voyage, prends soin de toi.",
+        "classique": "Yoon wu neex, fàttali sa bopp.",
+        "sms": "Yoon wu nex fate sa bop",
+        "context": "Voyage"
+      },
+      {
+        "id": 33,
+        "french": "Ma commande n'est toujours pas arrivée.",
+        "classique": "Sama commande agsiwul ba tey.",
+        "sms": "Sama cmd agsiwul",
+        "context": "Shopping en ligne"
+      },
+      {
+        "id": 34,
+        "french": "J'ai rendez-vous chez le médecin demain.",
+        "classique": "Am naa rendez-vous ci doktoor bi suba.",
+        "sms": "Am rdv doktoor suba",
+        "context": "Rendez-vous médical"
+      },
+      {
+        "id": 35,
+        "french": "Tu m'énerves vraiment là.",
+        "classique": "Dangay metital sama xol tey.",
+        "sms": "Dang meti sama xol tey 😤",
+        "context": "Colère"
+      },
+      {
+        "id": 36,
+        "french": "C'est incroyable, je n'y crois pas !",
+        "classique": "Lii dafa jaaxal, gëmuma ko!",
+        "sms": "Lii jaxal! 😱",
+        "context": "Surprise"
+      },
+      {
+        "id": 37,
+        "french": "Es-tu sûr de ce que tu dis ?",
+        "classique": "Ndax wóor nga li ngay wax?",
+        "sms": "Woor nga li ngay wax?",
+        "context": "Question"
+      },
+      {
+        "id": 38,
+        "french": "Quelle heure est-il maintenant ?",
+        "classique": "Ban waxtu la tey?",
+        "sms": "Ban waxt la tey?",
+        "context": "Heure"
+      },
+      {
+        "id": 39,
+        "french": "Je suis à la maison, tu peux venir.",
+        "classique": "Mangi ci kër gi, mën nga ñëw.",
+        "sms": "Mangi ker gi new",
+        "context": "Maison"
+      },
+      {
+        "id": 40,
+        "french": "J'ai adopté un chat la semaine dernière.",
+        "classique": "Jël naa muus ci ayubés bi weesu.",
+        "sms": "Jel muus ayu bi wesu 🐱",
+        "context": "Animaux"
+      },
+      {
+        "id": 41,
+        "french": "J'adore vraiment cette chanson.",
+        "classique": "Dama bëgg lool woy bii.",
+        "sms": "Bgg lol woy bi 🎵",
+        "context": "Musique"
+      },
+      {
+        "id": 42,
+        "french": "Bonne nuit, fais de beaux rêves.",
+        "classique": "Fanaanal jàmm, gént yu neex.",
+        "sms": "Fanan jam 🌙",
+        "context": "Bonne nuit"
+      },
+      {
+        "id": 43,
+        "french": "Tu devrais te reposer un peu.",
+        "classique": "War nga noppalu tuuti.",
+        "sms": "War naa nopalu tuti",
+        "context": "Conseil"
+      },
+      {
+        "id": 44,
+        "french": "Ce n'est pas normal, il faut se plaindre.",
+        "classique": "Lii jaxasul, war nañu wooyaat.",
+        "sms": "Lii jaxasul war nu woyat",
+        "context": "Réclamation"
+      },
+      {
+        "id": 45,
+        "french": "Bienvenue chez nous, sens-toi à l'aise.",
+        "classique": "Dalal ak jàmm, defal sa bopp ci sa kër.",
+        "sms": "Dalal ak jam 🏡",
+        "context": "Bienvenue"
       }
     ],
     "tahitien": [
@@ -529,6 +809,146 @@
         "classique": "Ia manuia i tā ‘oe ohipa ‘āpī!",
         "sms": "Ia manuia ohipa api!",
         "context": "Encouragement"
+      },
+      {
+        "id": 26,
+        "french": "Où se trouve la gare, s'il te plaît ?",
+        "classique": "Tei hea te fare pereoo ahi, e mea nehenehe?",
+        "sms": "Tei hea fare pereo ahi?",
+        "context": "Direction"
+      },
+      {
+        "id": 27,
+        "french": "J'ai un examen important demain.",
+        "classique": "E hi'opo'a faufaa tā'u ā apōpō.",
+        "sms": "Hiopoa faufaa apopo",
+        "context": "École"
+      },
+      {
+        "id": 28,
+        "french": "On joue au foot ce week-end ?",
+        "classique": "E tāpōra'a anei tāua i teie fa'aea?",
+        "sms": "Tapora anei fa'aea?",
+        "context": "Sport"
+      },
+      {
+        "id": 29,
+        "french": "Joyeux anniversaire ! Que tous tes vœux se réalisent.",
+        "classique": "Ia oa'oa i to'oe mahana fanauraa! Ia tupu ta'oe mau hina'aro.",
+        "sms": "Oaoa mahana fanauraa! 🎂",
+        "context": "Anniversaire"
+      },
+      {
+        "id": 30,
+        "french": "Je t'aime plus que tout.",
+        "classique": "Ua here vau ia oe i nia i te mau mea atoa.",
+        "sms": "Here vau ia oe rahi ❤️",
+        "context": "Amour"
+      },
+      {
+        "id": 31,
+        "french": "Toutes mes condoléances pour ta perte.",
+        "classique": "Te here nei au ia oe i roto i teie ati.",
+        "sms": "Aroha 🙏",
+        "context": "Condoléances"
+      },
+      {
+        "id": 32,
+        "french": "Bon voyage, prends soin de toi.",
+        "classique": "Ia haere maitai, a aupuru ia oe.",
+        "sms": "Haere maitai",
+        "context": "Voyage"
+      },
+      {
+        "id": 33,
+        "french": "Ma commande n'est toujours pas arrivée.",
+        "classique": "Aita ta'u tono i tae mai.",
+        "sms": "Aita tono i tae",
+        "context": "Shopping en ligne"
+      },
+      {
+        "id": 34,
+        "french": "J'ai rendez-vous chez le médecin demain.",
+        "classique": "E farerei au i te taote apopo.",
+        "sms": "Farerei taote apopo",
+        "context": "Rendez-vous médical"
+      },
+      {
+        "id": 35,
+        "french": "Tu m'énerves vraiment là.",
+        "classique": "Ua riri roa au ia oe i teie nei.",
+        "sms": "Riri roa au 😤",
+        "context": "Colère"
+      },
+      {
+        "id": 36,
+        "french": "C'est incroyable, je n'y crois pas !",
+        "classique": "Mea maere roa, aita au e tiaturi nei!",
+        "sms": "Maere roa! 😱",
+        "context": "Surprise"
+      },
+      {
+        "id": 37,
+        "french": "Es-tu sûr de ce que tu dis ?",
+        "classique": "Ua papu anei ta oe e parau nei?",
+        "sms": "Papu anei?",
+        "context": "Question"
+      },
+      {
+        "id": 38,
+        "french": "Quelle heure est-il maintenant ?",
+        "classique": "E aha te hora i teie nei?",
+        "sms": "Aha hora teie nei?",
+        "context": "Heure"
+      },
+      {
+        "id": 39,
+        "french": "Je suis à la maison, tu peux venir.",
+        "classique": "Tei roto au i te fare, e nehenehe oe e haere mai.",
+        "sms": "Tei fare, haere mai",
+        "context": "Maison"
+      },
+      {
+        "id": 40,
+        "french": "J'ai adopté un chat la semaine dernière.",
+        "classique": "Ua rave au i te hoê pi'afare i teie hepetoma.",
+        "sms": "Rave pi'afare hepetoma 🐱",
+        "context": "Animaux"
+      },
+      {
+        "id": 41,
+        "french": "J'adore vraiment cette chanson.",
+        "classique": "Au'a roa vau i teie himene.",
+        "sms": "Auaa roa himene 🎵",
+        "context": "Musique"
+      },
+      {
+        "id": 42,
+        "french": "Bonne nuit, fais de beaux rêves.",
+        "classique": "Ia moe maitai, mau moemoea nehenehe.",
+        "sms": "Moe maitai 🌙",
+        "context": "Bonne nuit"
+      },
+      {
+        "id": 43,
+        "french": "Tu devrais te reposer un peu.",
+        "classique": "E tia ia oe ia faaea iti noa.",
+        "sms": "Tia faaea iti",
+        "context": "Conseil"
+      },
+      {
+        "id": 44,
+        "french": "Ce n'est pas normal, il faut se plaindre.",
+        "classique": "Aita i tia, e mea tia ia parau.",
+        "sms": "Aita tia",
+        "context": "Réclamation"
+      },
+      {
+        "id": 45,
+        "french": "Bienvenue chez nous, sens-toi à l'aise.",
+        "classique": "Maeva i to matou fare, ia oe noa.",
+        "sms": "Maeva 🏡",
+        "context": "Bienvenue"
       }
     ]
   }
