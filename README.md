@@ -2,25 +2,39 @@
 
 Application de traduction français → darija / wolof / tahitien, propulsée par Ollama en few-shot prompting.
 
+Trois interfaces partagent le même backend :
+- **`frontend/`** — site web responsive : mise en page desktop plein écran (deux panneaux
+  français/traduction) à partir de 761px de large, mise en page mobile empilée en dessous.
+- **`mobile/`** — application mobile native (Expo / React Native, iOS + Android).
+
 ## Structure
 
 ```
 linguao/
 ├── backend/
-│   ├── app.py                 # API Flask (/translate, /languages, /health)
+│   ├── app.py                 # API Flask (/translate, /translate/<job_id>, /languages, /health)
 │   ├── translator.py          # sélection d'exemples + prompt few-shot + appel Ollama
-│   ├── translate_exemples.json  # base d'exemples (25 phrases par langue)
+│   ├── translate_exemples.json  # base d'exemples
 │   └── requirements.txt
-└── frontend/
-    ├── index.html
-    ├── style.css
-    └── script.js
+├── frontend/                  # client web (mobile + desktop 1920x1080)
+│   ├── index.html
+│   ├── style.css
+│   └── script.js
+└── mobile/                    # client mobile natif (Expo / React Native)
+    ├── App.tsx
+    ├── src/
+    │   ├── api.ts              # appel du backend (job + polling) + réglage de l'URL
+    │   ├── theme.ts             # couleurs, mode clair/sombre
+    │   └── components/
+    └── app.json
 ```
 
 ## Prérequis
 
 - [Ollama](https://ollama.com) installé
 - Python 3.9+
+- Node.js 18+ (pour le client mobile)
+- L'app [Expo Go](https://expo.dev/go) sur ton téléphone (iOS/Android) pour tester le client mobile sans Xcode/Android Studio
 
 ## Installation
 
@@ -50,6 +64,13 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
+### 4. Installer les dépendances du client mobile (optionnel, si tu veux tester sur téléphone)
+
+```bash
+cd mobile
+npm install
+```
+
 ## Lancer le projet
 
 Il faut 3 terminaux ouverts en même temps.
@@ -68,7 +89,25 @@ cd frontend
 python3 -m http.server 8000
 ```
 
-Ouvre ensuite **http://localhost:8000** dans le navigateur.
+Ouvre ensuite **http://localhost:8000** dans le navigateur : sur un écran large (≥761px), l'app
+prend tout l'écran avec les panneaux français/traduction côte à côte ; sur mobile, les panneaux
+s'empilent et la page redevient scrollable normalement.
+
+Le frontend devine l'adresse du backend automatiquement (port 8000 en dev local → `localhost:5000`,
+sinon même origine que la page — utile derrière un reverse proxy en prod). Si besoin, le bouton ⚙️
+permet de saisir une adresse manuellement (mémorisée dans le navigateur).
+
+### Client mobile (Expo)
+
+```bash
+cd mobile
+npm start
+```
+
+Scanne le QR code affiché avec l'app **Expo Go** (Android) ou l'appareil photo (iOS) — ton
+téléphone doit être sur le même réseau Wi-Fi que ton ordinateur. L'app devine l'adresse du backend
+à partir de l'IP utilisée par Expo pour charger le bundle ; si besoin, corrige-la depuis l'icône ⚙️
+dans l'app.
 
 ### Vérifier que ça tourne
 
@@ -102,6 +141,6 @@ Les phrases de `translate_exemples.json` ont été générées avec l'aide d'une
 
 ## Pistes d'évolution
 
-- **RAG** : si `translate_exemples.json` grossit (100+ exemples/langue), remplacer la sélection aléatoire par une recherche par similarité (embeddings + base vectorielle type Chroma/FAISS) pour choisir les exemples les plus pertinents.
-- **Historique** : sauvegarder les traductions précédentes côté client (localStorage) ou serveur.
+- **RAG** : si `translate_exemples.json` grossit (100+ exemples/langue), remplacer la sélection par similarité de mots-clés par une recherche par embeddings + base vectorielle (type Chroma/FAISS) pour choisir les exemples les plus pertinents.
 - **Contribution communautaire** : permettre aux locuteurs natifs de proposer/corriger des exemples pour enrichir la base.
+- **Build mobile autonome** : générer un APK/IPA installable (via `eas build`) pour ne plus dépendre d'Expo Go.

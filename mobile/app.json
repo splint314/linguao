@@ -1,0 +1,28 @@
+{
+  "expo": {
+    "name": "Linguao",
+    "slug": "linguao",
+    "scheme": "linguao",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.linguao.app"
+    },
+    "android": {
+      "package": "com.linguao.app",
+      "adaptiveIcon": {
+        "backgroundColor": "#0f0e1a",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    }
+  }
+}
