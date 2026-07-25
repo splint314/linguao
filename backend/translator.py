@@ -29,17 +29,24 @@ def _similarity(text, other):
     return len(words_a & words_b) / len(words_a | words_b)
 
 
-def get_examples(language, register, text, max_examples=2):
+def get_examples(language, register, text, max_examples=3):
     database = load_database()
     entries = database.get(language, [])
     # On choisit les exemples dont la phrase française ressemble le plus à
     # la demande : un exemple sans rapport pousse le modèle à le recopier
     # tel quel au lieu de traduire la vraie phrase.
-    ranked = sorted(entries, key=lambda e: _similarity(text, e["french"]), reverse=True)
-    top = ranked[:max_examples]
+    scored = [(e, _similarity(text, e["french"])) for e in entries]
+    relevant = [e for e, score in scored if score > 0]
+    relevant.sort(key=lambda e: _similarity(text, e["french"]), reverse=True)
+    top = relevant[:max_examples]
     if len(top) < max_examples:
+        # Aucun exemple pertinent trouvé (phrase courte/isolée type "salut") :
+        # on pioche au hasard plutôt que de toujours reprendre les mêmes
+        # premières entrées de la base (le tri par score à 0 partout serait
+        # sinon stable et renverrait systématiquement les mêmes exemples).
         remaining = [e for e in entries if e not in top]
-        top += random.sample(remaining, min(max_examples - len(top), len(remaining)))
+        random.shuffle(remaining)
+        top += remaining[: max_examples - len(top)]
     return [(entry["french"], entry[register]) for entry in top]
 
 
@@ -51,8 +58,18 @@ def build_prompt(text, language, register, examples):
         f'FR: "{fr}" -> "{translated}"' for fr, translated in examples
     )
 
+    # Le darija n'a pas d'orthographe officielle : le modèle bascule parfois
+    # en alphabet arabe alors que toute la base d'exemples (et l'app) utilise
+    # une transcription latine (arabizi, chiffres pour les sons arabes).
+    script_note = (
+        " Écris toujours en alphabet latin (arabizi), jamais en alphabet arabe."
+        if language == "darija"
+        else ""
+    )
+
     return (
-        f"Tu traduis du français vers le {label} ({style}). "
+        f"Tu traduis du français vers le {label} ({style})."
+        f"{script_note} "
         f"Réponds uniquement par la traduction, sans aucune explication.\n"
         f"{examples_block}\n"
         f'FR: "{text}" ->'
@@ -97,10 +114,35 @@ def _clean_translation(raw):
     return text.strip() or raw.strip()
 
 
-def _looks_wrong(translation, text, examples):
+_FRENCH_MARKERS = {
+    "je", "tu", "il", "elle", "nous", "vous", "ils", "elles", "le", "la",
+    "les", "un", "une", "des", "que", "qui", "pour", "avec", "dans", "sur",
+    "est", "suis", "moi", "toi", "et", "de", "du", "au", "aux", "ce",
+    "cette", "bon", "bien", "toi",
+}
+
+
+def _french_marker_count(text):
+    return len(set(re.findall(r"\w+", text.lower())) & _FRENCH_MARKERS)
+
+
+_ARABIC_SCRIPT_RE = re.compile(r"[؀-ۿ]")
+
+
+def _looks_wrong(translation, text, examples, language=None):
     norm = lambda s: re.sub(r"[^\w]", "", s.lower())
     # Le modèle a juste recopié le français au lieu de traduire.
     if norm(translation) == norm(text):
+        return True
+    # Le modèle a répondu (au moins en partie) en français au lieu de
+    # traduire : plusieurs mots-outils français dans une traduction censée
+    # être dans une tout autre langue trahissent une réponse ratée.
+    if _french_marker_count(translation) >= 2:
+        return True
+    # Le darija de l'app est transcrit en alphabet latin (arabizi) : une
+    # réponse en alphabet arabe casse cette convention, même si le sens est
+    # correct (le modèle bascule parfois vers l'arabe standard).
+    if language == "darija" and _ARABIC_SCRIPT_RE.search(translation):
         return True
     # Le modèle a recopié la traduction d'un exemple qui ne correspond pas
     # vraiment à la phrase demandée (copie au lieu de généraliser).
@@ -152,15 +194,16 @@ def translate(text, language, register="classique"):
     examples = get_examples(language, register, text)
     prompt = build_prompt(text, language, register, examples)
 
+    # Si le résultat est manifestement raté (écho du français, réponse encore
+    # en français, alphabet arabe pour du darija, copie d'un exemple sans
+    # rapport...), on retente avant d'abandonner : chaque appel étant rapide
+    # (< 1s en général), quelques tentatives de plus coûtent peu face au gain
+    # de fiabilité, sans changer la vitesse perçue dans le cas courant.
     result = _call_ollama(prompt)
-
-    # Si le résultat est manifestement raté (écho du français, ou copie d'un
-    # exemple sans rapport), on retente une fois avant d'abandonner : la
-    # température élevée donne une chance d'obtenir une vraie traduction.
-    if _looks_wrong(result, text, examples):
-        retry = _call_ollama(prompt)
-        if not _looks_wrong(retry, text, examples):
-            return retry
+    for _ in range(2):
+        if not _looks_wrong(result, text, examples, language):
+            return result
+        result = _call_ollama(prompt)
 
     return result
 

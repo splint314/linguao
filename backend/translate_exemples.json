@@ -420,6 +420,27 @@
         "classique": "Drari dyali labas, chokran.",
         "sms": "Drari labas chokran",
         "context": "Enfants"
+      },
+      {
+        "id": 61,
+        "french": "Salut !",
+        "classique": "Salam!",
+        "sms": "Slm! 👋",
+        "context": "Salutations"
+      },
+      {
+        "id": 62,
+        "french": "Bonjour !",
+        "classique": "Sbah lkhir!",
+        "sms": "Sba lkhir!",
+        "context": "Salutations"
+      },
+      {
+        "id": 63,
+        "french": "Salut, ça va ?",
+        "classique": "Salam, kif dayer?",
+        "sms": "Slm kif dayer?",
+        "context": "Salutations"
       }
     ],
     "wolof": [
@@ -842,6 +863,27 @@
         "classique": "Samay doom ñu baax, jërëjëf.",
         "sms": "Samay dom nu bax jerejef",
         "context": "Enfants"
+      },
+      {
+        "id": 61,
+        "french": "Salut !",
+        "classique": "Salaam!",
+        "sms": "Slm!",
+        "context": "Salutations"
+      },
+      {
+        "id": 62,
+        "french": "Bonjour !",
+        "classique": "Salaam aleekum!",
+        "sms": "Slm alekum!",
+        "context": "Salutations"
+      },
+      {
+        "id": 63,
+        "french": "Salut, ça va ?",
+        "classique": "Salaam, naka nga def?",
+        "sms": "Slm naka def?",
+        "context": "Salutations"
       }
     ],
     "tahitien": [
@@ -1264,6 +1306,27 @@
         "classique": "Mea maitai tā’u mau tamari’i, māuruuru.",
         "sms": "Maitai tamarii mauruuru",
         "context": "Enfants"
+      },
+      {
+        "id": 61,
+        "french": "Salut !",
+        "classique": "Ia ora na!",
+        "sms": "Iaorana!",
+        "context": "Salutations"
+      },
+      {
+        "id": 62,
+        "french": "Bonjour !",
+        "classique": "Ia ora na!",
+        "sms": "Iaorana!",
+        "context": "Salutations"
+      },
+      {
+        "id": 63,
+        "french": "Salut, ça va ?",
+        "classique": "Ia ora na, e aha to oe huru?",
+        "sms": "Iaorana, eaha to oe huru?",
+        "context": "Salutations"
       }
     ]
   }
