@@ -43,10 +43,9 @@ def get_examples(language, register, text, max_examples=2):
     return [(entry["french"], entry[register]) for entry in top]
 
 
-def build_prompt(text, language, register):
+def build_prompt(text, language, register, examples):
     label = LANGUAGE_LABELS.get(language, language)
     style = "familier façon SMS" if register == "sms" else "classique"
-    examples = get_examples(language, register, text)
 
     examples_block = "\n".join(
         f'FR: "{fr}" -> "{translated}"' for fr, translated in examples
@@ -98,14 +97,20 @@ def _clean_translation(raw):
     return text.strip() or raw.strip()
 
 
-def translate(text, language, register="classique"):
-    if language not in LANGUAGE_LABELS:
-        raise ValueError(f"Langue non supportée : {language}")
-    if register not in ("classique", "sms"):
-        raise ValueError(f"Registre non supporté : {register}")
+def _looks_wrong(translation, text, examples):
+    norm = lambda s: re.sub(r"[^\w]", "", s.lower())
+    # Le modèle a juste recopié le français au lieu de traduire.
+    if norm(translation) == norm(text):
+        return True
+    # Le modèle a recopié la traduction d'un exemple qui ne correspond pas
+    # vraiment à la phrase demandée (copie au lieu de généraliser).
+    for fr, translated in examples:
+        if norm(translation) == norm(translated) and _similarity(text, fr) < 0.4:
+            return True
+    return False
 
-    prompt = build_prompt(text, language, register)
 
+def _call_ollama(prompt):
     response = requests.post(
         OLLAMA_URL,
         json={
@@ -136,6 +141,28 @@ def translate(text, language, register="classique"):
     )
     response.raise_for_status()
     return _clean_translation(response.json()["response"])
+
+
+def translate(text, language, register="classique"):
+    if language not in LANGUAGE_LABELS:
+        raise ValueError(f"Langue non supportée : {language}")
+    if register not in ("classique", "sms"):
+        raise ValueError(f"Registre non supporté : {register}")
+
+    examples = get_examples(language, register, text)
+    prompt = build_prompt(text, language, register, examples)
+
+    result = _call_ollama(prompt)
+
+    # Si le résultat est manifestement raté (écho du français, ou copie d'un
+    # exemple sans rapport), on retente une fois avant d'abandonner : la
+    # température élevée donne une chance d'obtenir une vraie traduction.
+    if _looks_wrong(result, text, examples):
+        retry = _call_ollama(prompt)
+        if not _looks_wrong(retry, text, examples):
+            return retry
+
+    return result
 
 
 def available_languages():

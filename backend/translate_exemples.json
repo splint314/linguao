@@ -315,6 +315,111 @@
         "classique": "Marhba bik 3ndna, kon f rahtek.",
         "sms": "Mrhba bik 3ndna 🏡",
         "context": "Bienvenue"
+      },
+      {
+        "id": 46,
+        "french": "On se voit demain ?",
+        "classique": "Nchoufo ghda?",
+        "sms": "Nchawfo ghda?",
+        "context": "Planification"
+      },
+      {
+        "id": 47,
+        "french": "Tu peux m'aider s'il te plaît ?",
+        "classique": "Ymkn lik t3awnni 3afak?",
+        "sms": "Ymkn t3awnni stp?",
+        "context": "Aide"
+      },
+      {
+        "id": 48,
+        "french": "D'accord, pas de problème.",
+        "classique": "Wakha, makinch mochkil.",
+        "sms": "Wakha makinch mochkil 👍",
+        "context": "Accord"
+      },
+      {
+        "id": 49,
+        "french": "Je ne suis pas d'accord avec toi.",
+        "classique": "Ana machi mwafi9 m3ak.",
+        "sms": "Mchi mwafi9 m3ak",
+        "context": "Désaccord"
+      },
+      {
+        "id": 50,
+        "french": "Je m'appelle Sarah, enchantée.",
+        "classique": "Smiti Sarah, metcharfin.",
+        "sms": "Smiti Sarah mchrfin",
+        "context": "Présentation"
+      },
+      {
+        "id": 51,
+        "french": "J'ai très faim, on mange bientôt ?",
+        "classique": "3andi jou3 bzaf, ghanaklo dghya?",
+        "sms": "3ndi jou3 bzf ghanklo dghya?",
+        "context": "Faim"
+      },
+      {
+        "id": 52,
+        "french": "Je peux utiliser ton téléphone ?",
+        "classique": "Ymkn liya nesta3mel portablek?",
+        "sms": "Ymkn nsta3ml portablk?",
+        "context": "Permission"
+      },
+      {
+        "id": 53,
+        "french": "Le bus arrive dans combien de temps ?",
+        "classique": "Lcar ghadi yousel mn b3d chhal?",
+        "sms": "Lcar ghyousl mn b3d chhal?",
+        "context": "Transport"
+      },
+      {
+        "id": 54,
+        "french": "Passe une bonne journée !",
+        "classique": "Nhark sa3id!",
+        "sms": "Nhrk sa3id! ☀️",
+        "context": "Bonne journée"
+      },
+      {
+        "id": 55,
+        "french": "Je pense que c'est une bonne idée.",
+        "classique": "Kanchouf hadi fikra mzyana.",
+        "sms": "Knchouf fikra mzyana",
+        "context": "Opinion"
+      },
+      {
+        "id": 56,
+        "french": "C'est loin d'ici ?",
+        "classique": "Wach b3id mn hna?",
+        "sms": "B3id mn hna?",
+        "context": "Distance"
+      },
+      {
+        "id": 57,
+        "french": "Bon appétit, régale-toi !",
+        "classique": "Bsa7a wa raha!",
+        "sms": "Bsa7a! 🍽️",
+        "context": "Bon appétit"
+      },
+      {
+        "id": 58,
+        "french": "Je suis bien arrivé, ne t'inquiète pas.",
+        "classique": "Wselt bikhir, matkhafch.",
+        "sms": "Wslt bkhir mtkhfch",
+        "context": "Arrivée"
+      },
+      {
+        "id": 59,
+        "french": "C'est trop cher, tu peux baisser le prix ?",
+        "classique": "Ghali bzaf, ymkn tnzzel taman?",
+        "sms": "Ghali bzf tnzl taman?",
+        "context": "Négociation"
+      },
+      {
+        "id": 60,
+        "french": "Mes enfants vont bien, merci.",
+        "classique": "Drari dyali labas, chokran.",
+        "sms": "Drari labas chokran",
+        "context": "Enfants"
       }
     ],
     "wolof": [
@@ -632,6 +737,111 @@
         "classique": "Dalal ak jàmm, defal sa bopp ci sa kër.",
         "sms": "Dalal ak jam 🏡",
         "context": "Bienvenue"
+      },
+      {
+        "id": 46,
+        "french": "On se voit demain ?",
+        "classique": "Ndax dinanu gis suba?",
+        "sms": "Nu gis suba?",
+        "context": "Planification"
+      },
+      {
+        "id": 47,
+        "french": "Tu peux m'aider s'il te plaît ?",
+        "classique": "Ndax mën nga ma dimbali, su la neexee?",
+        "sms": "Mën nga dimbali stp?",
+        "context": "Aide"
+      },
+      {
+        "id": 48,
+        "french": "D'accord, pas de problème.",
+        "classique": "Waaw, amul problem.",
+        "sms": "Waw amul problem 👍",
+        "context": "Accord"
+      },
+      {
+        "id": 49,
+        "french": "Je ne suis pas d'accord avec toi.",
+        "classique": "Bokkuma xalaat ak yow.",
+        "sms": "Boku ak yow xalaat",
+        "context": "Désaccord"
+      },
+      {
+        "id": 50,
+        "french": "Je m'appelle Sarah, enchantée.",
+        "classique": "Maa ngi tudd Sarah, contaan naa.",
+        "sms": "Tudd Sarah contan naa",
+        "context": "Présentation"
+      },
+      {
+        "id": 51,
+        "french": "J'ai très faim, on mange bientôt ?",
+        "classique": "Dama xiif lool, dinanu lekk léegi?",
+        "sms": "Xiif lol, lekk legi?",
+        "context": "Faim"
+      },
+      {
+        "id": 52,
+        "french": "Je peux utiliser ton téléphone ?",
+        "classique": "Ndax mën naa jëfandikoo sa telefon?",
+        "sms": "Mn jfandiko sa tel?",
+        "context": "Permission"
+      },
+      {
+        "id": 53,
+        "french": "Le bus arrive dans combien de temps ?",
+        "classique": "Ban diir la car bi di agsi?",
+        "sms": "Car bi agsi ban diir?",
+        "context": "Transport"
+      },
+      {
+        "id": 54,
+        "french": "Passe une bonne journée !",
+        "classique": "Bàyyi ci jamm bés bi!",
+        "sms": "Bay ci jam bes bi ☀️",
+        "context": "Bonne journée"
+      },
+      {
+        "id": 55,
+        "french": "Je pense que c'est une bonne idée.",
+        "classique": "Defe naa lii mooy xalaat bu baax.",
+        "sms": "Def na xalaat bu bax",
+        "context": "Opinion"
+      },
+      {
+        "id": 56,
+        "french": "C'est loin d'ici ?",
+        "classique": "Ndax sore na fii?",
+        "sms": "Sore na fi?",
+        "context": "Distance"
+      },
+      {
+        "id": 57,
+        "french": "Bon appétit, régale-toi !",
+        "classique": "Lekk bu neex!",
+        "sms": "Lekk bu nex! 🍽️",
+        "context": "Bon appétit"
+      },
+      {
+        "id": 58,
+        "french": "Je suis bien arrivé, ne t'inquiète pas.",
+        "classique": "Agsi naa bu baax, bul jaxaso.",
+        "sms": "Agsi bu bax bul jaxaso",
+        "context": "Arrivée"
+      },
+      {
+        "id": 59,
+        "french": "C'est trop cher, tu peux baisser le prix ?",
+        "classique": "Dafa jafe lool, mën nga wàññi njëg li?",
+        "sms": "Jafe lol wani njeg li?",
+        "context": "Négociation"
+      },
+      {
+        "id": 60,
+        "french": "Mes enfants vont bien, merci.",
+        "classique": "Samay doom ñu baax, jërëjëf.",
+        "sms": "Samay dom nu bax jerejef",
+        "context": "Enfants"
       }
     ],
     "tahitien": [
@@ -949,6 +1159,111 @@
         "classique": "Maeva i to matou fare, ia oe noa.",
         "sms": "Maeva 🏡",
         "context": "Bienvenue"
+      },
+      {
+        "id": 46,
+        "french": "On se voit demain ?",
+        "classique": "E farerei tāua apōpō?",
+        "sms": "Farerei apopo?",
+        "context": "Planification"
+      },
+      {
+        "id": 47,
+        "french": "Tu peux m'aider s'il te plaît ?",
+        "classique": "E nehenehe anei ‘oe e tauturu mai ia’u?",
+        "sms": "Nehenehe tauturu mai?",
+        "context": "Aide"
+      },
+      {
+        "id": 48,
+        "french": "D'accord, pas de problème.",
+        "classique": "Parau mau, ‘aita e fifi.",
+        "sms": "Parau mau aita fifi 👍",
+        "context": "Accord"
+      },
+      {
+        "id": 49,
+        "french": "Je ne suis pas d'accord avec toi.",
+        "classique": "‘Aita vau e ti’a ra i tā’oe parau.",
+        "sms": "Aita tia i ta'oe parau",
+        "context": "Désaccord"
+      },
+      {
+        "id": 50,
+        "french": "Je m'appelle Sarah, enchantée.",
+        "classique": "O Sarah tō’u i’oa, mauruuru i te farereiraa.",
+        "sms": "O Sarah toou ioa",
+        "context": "Présentation"
+      },
+      {
+        "id": 51,
+        "french": "J'ai très faim, on mange bientôt ?",
+        "classique": "Mea poia roa au, e tāmā’a ānane tāua?",
+        "sms": "Poia roa, tama'a anane?",
+        "context": "Faim"
+      },
+      {
+        "id": 52,
+        "french": "Je peux utiliser ton téléphone ?",
+        "classique": "E nehenehe anei au e fa’aohipa i tā’oe niuniu?",
+        "sms": "Nehenehe faaohipa niuniu?",
+        "context": "Permission"
+      },
+      {
+        "id": 53,
+        "french": "Le bus arrive dans combien de temps ?",
+        "classique": "E hia mine e tae mai ai te pereoo pupu?",
+        "sms": "Hia mine tae pereoo?",
+        "context": "Transport"
+      },
+      {
+        "id": 54,
+        "french": "Passe une bonne journée !",
+        "classique": "Ia maita’i te mahana!",
+        "sms": "Maitai mahana! ☀️",
+        "context": "Bonne journée"
+      },
+      {
+        "id": 55,
+        "french": "Je pense que c'est une bonne idée.",
+        "classique": "Mana’o vau e mana’o maitai teie.",
+        "sms": "Manao maitai teie",
+        "context": "Opinion"
+      },
+      {
+        "id": 56,
+        "french": "C'est loin d'ici ?",
+        "classique": "Mea atea anei teie i konei?",
+        "sms": "Atea anei konei?",
+        "context": "Distance"
+      },
+      {
+        "id": 57,
+        "french": "Bon appétit, régale-toi !",
+        "classique": "Ia maitai ta’oe tāmā’a!",
+        "sms": "Maitai tamaa! 🍽️",
+        "context": "Bon appétit"
+      },
+      {
+        "id": 58,
+        "french": "Je suis bien arrivé, ne t'inquiète pas.",
+        "classique": "Ua tae maitai au, eiaha e rāre.",
+        "sms": "Tae maitai eiaha rare",
+        "context": "Arrivée"
+      },
+      {
+        "id": 59,
+        "french": "C'est trop cher, tu peux baisser le prix ?",
+        "classique": "Mea hoo rahi roa, e nehenehe anei e fa’aiti i te moni?",
+        "sms": "Hoo rahi, faaiti moni?",
+        "context": "Négociation"
+      },
+      {
+        "id": 60,
+        "french": "Mes enfants vont bien, merci.",
+        "classique": "Mea maitai tā’u mau tamari’i, māuruuru.",
+        "sms": "Maitai tamarii mauruuru",
+        "context": "Enfants"
       }
     ]
   }
