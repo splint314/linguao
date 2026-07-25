@@ -1,2 +1,16 @@
 __pycache__/
 *.pyc
+
+# backend virtualenv (was accidentally committed — see git rm --cached below)
+backend/linguao/
+backend/venv/
+backend/.venv/
+
+# mobile (Expo/React Native)
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/web-build/
+mobile/expo-env.d.ts
+mobile/*.tsbuildinfo
+mobile/npm-debug.*
